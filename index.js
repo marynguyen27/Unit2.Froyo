@@ -21,4 +21,15 @@ console.log(flavorsArray);
 //     assign a key if it's not there and give it a value
 //     if it is already there, we need to increment the count of how many by 1
 
+const objFlavors = {};
+for (let i = 0; i < flavorsArray.length; i++) {
+  if (!Object.hasOwn(objFlavors, flavorsArray[i])) {
+    objFlavors[flavorsArray[i]] = 1;
+  } else {
+    objFlavors[flavorsArray[i]] += 1;
+  }
+}
+
+console.log(objFlavors);
+
 // 4th. Print the object out
